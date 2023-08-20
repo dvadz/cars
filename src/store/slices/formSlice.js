@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const formSlice = createSlice({
   name: "form",
-  initailState: { name: "", cost: 0 },
+  initialState: { name: "", cost: 0 },
   reducers: {
     changeName(state, action) {
       state.name = action.payload;
