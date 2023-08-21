@@ -1,4 +1,8 @@
+import { useDispatch, useSelector } from "react-redux";
+import { changeName } from "../store";
+
 const CarForm = () => {
+  const dispatch = useDispatch();
   return (
     <div>
       <form>
