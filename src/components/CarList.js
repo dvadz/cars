@@ -5,7 +5,20 @@ const CarList = () => {
     return state.cars.data;
   });
 
-  return <div></div>;
+  const renderedCars = cars.map((car) => {
+    return (
+      <div key={car.id}>
+        <span>{car.name}</span> - $<span>{car.cost}</span>
+      </div>
+    );
+  });
+
+  return (
+    <div>
+      {renderedCars}
+      <hr></hr>
+    </div>
+  );
 };
 
 export default CarList;
