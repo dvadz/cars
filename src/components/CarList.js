@@ -1,5 +1,11 @@
+import { useSelector } from "react-redux";
+
 const CarList = () => {
-  return <div>CarList</div>;
+  const cars = useSelector((state) => {
+    return state.cars.data;
+  });
+
+  return <div></div>;
 };
 
 export default CarList;
