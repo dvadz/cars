@@ -17,22 +17,39 @@ const CarForm = () => {
   };
 
   const handleSubmit = (event) => {
+    console.log("submit");
     event.preventDefault();
     dispatch(addCar({ name, cost }));
   };
 
   return (
-    <div>
+    <div className="car-form panel">
+      <h4 className="subtitle is-3">Add a Car</h4>
       <form>
-        <label>Name</label>
-        <input onChange={handleNameChange} value={name}></input>
-        <label>Cost</label>
-        <input
-          onChange={handleCostChange}
-          value={cost || ""}
-          type="number"
-        ></input>
-        <button onClick={handleSubmit}>Submit</button>
+        <div className="field-group">
+          <div className="field">
+            <label className="label">Name</label>
+            <input
+              className="input is-expanded"
+              onChange={handleNameChange}
+              value={name}
+            ></input>
+          </div>
+          <div className="field">
+            <label className="label">Cost</label>
+            <input
+              className=" input is-expanded"
+              onChange={handleCostChange}
+              value={cost || ""}
+              type="number"
+            ></input>
+          </div>
+          <div className="field">
+            <button className="button is-link" onClick={handleSubmit}>
+              Submit
+            </button>
+          </div>
+        </div>
       </form>
     </div>
   );
