@@ -14,17 +14,22 @@ const CarList = () => {
 
   const renderedCars = cars.map((car) => {
     return (
-      <div key={car.id}>
-        <span>
+      <div key={car.id} className="panel">
+        <p>
           {car.name} - ${car.cost}
-        </span>
-        <button onClick={() => handleCarDelete(car)}>Delete</button>
+        </p>
+        <button
+          className="button is-danger"
+          onClick={() => handleCarDelete(car)}
+        >
+          Delete
+        </button>
       </div>
     );
   });
 
   return (
-    <div>
+    <div className="car-list">
       {renderedCars}
       <hr></hr>
     </div>
