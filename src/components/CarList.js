@@ -18,8 +18,10 @@ const CarList = () => {
   };
 
   const renderedCars = cars.map((car) => {
+    const bold = name && car.name.toLowerCase().includes(name.toLowerCase());
+
     return (
-      <div key={car.id} className="panel">
+      <div key={car.id} className={bold ? "panel bold" : "panel"}>
         <p>
           {car.name} - ${car.cost}
         </p>
